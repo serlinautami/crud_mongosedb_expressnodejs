@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <!-- Memanggil File Header -->
+    <%- include('../../templates/header.ejs') %>
+</head>
+<tbody>
+    <div class="col-md-10">
+        <div class="panel-heading">
+            <h3 class="panel-title">Data siswa</h3>
+        </div>
+        <a href="/artikels/create">
+            <button type="button" name="button" class="btn btn-default"> + Data</button>
+        </a>
+        <div class="panel">
+            <table border="1" class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>no</td>
+                        <td>nama</td>
+                        <td>alamat</td>
+                        <td>agama</td>
+                        <td>aksi</td>
+                    </tr>
+                </thead>
+                <% data.forEach(function(item){ %>
+                    <tr>
+                        <td>
+                            <%= data.indexOf(item) + 1 %>.</td>
+                        <td>
+                            <%= item.nama %>
+                        </td>
+                        <td>
+                            <%= item.alamat %>
+                        </td>
+                        <td>
+                            <%= item.agama %>
+                        </td>
+                        <td>
+                            <a href="/artikels/edit/<%= item._id %>">
+                                <button type="button" class="btn btn-primary" style="width:70px;height:30px;">Edit</button>
+                            </a>||
+                            <a href="/artikels/show/<%= item._id %>">
+                                <button type="button" class="btn btn-danger" style="width:70px;height:30px;">Show</button>
+                            </a>||
+                            <a href="/artikels/delete/<%= item._id %>">
+                                <button type="button" class="btn btn-primary" style="width:70px;height:30px;">Delete</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+</tbody>
+<footer>
+    <!-- Memanggil File Footer -->
+    <%- include('../../templates/footer.ejs') %>
+</footer>
+
+</html>

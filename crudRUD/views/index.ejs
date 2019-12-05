@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Memanggil File Header -->
+    <%- include('../templates/header.ejs') %>
+   </head>
+  <body>
+    <!-- /Memanggil File Navbar -->
+    <%- include('../templates/navbar.ejs') %>
+    <div id="wrapper">
+      <!-- Memanggil File Sidebar -->
+      <%- include('../templates/sidebar.ejs') %>
+    </div>
+     <div class="main">
+        <div class="main-content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+               <!--  //Memanggil File Body dengan Routes -->
+                <%- include('artikels/dashboard.ejs') %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <footer>
+  <!-- Memanggil File Footer -->
+  <%- include('../templates/footer.ejs') %>
+  </footer>
+</html>

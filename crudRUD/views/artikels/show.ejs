@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Memanggil File Header -->
+    <%- include('../../templates/header.ejs') %>
+</head>
+
+<body>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Data Detail</h3>
+        </div>
+        <br>
+        <div class="panel">
+            <table border="1" class="table table-hover">
+                <tr>
+                    <td>no</td>
+                    <td>nama</td>
+                    <td>alamat</td>
+                    <td>agama</td>
+                </tr>
+                <tr>
+                    <td>
+                        <%= data._id %>
+                    </td>
+                    <td>
+                        <%= data.nama %>
+                    </td>
+                    <td>
+                        <%= data.alamat %>
+                    </td>
+                    <td>
+                        <%= data.agama %>
+                    </td>
+                </tr>
+            </table>
+            <footer>
+                <!-- Memanggil File Footer -->
+                <%- include('../../templates/footer.ejs') %>
+            </footer>
+</body>
+
+</html>
